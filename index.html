@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Tails</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Paws & Tails</h1>
+        <nav>
+            <ul>
+                <li><a href="#games">Interactive Games</a></li>
+                <li><a href="#gallery">Image Gallery</a></li>
+                <li><a href="#resources">Dog Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="games">
+            <h2>Interactive Games</h2>
+            <div class="game">
+                <h3>Which Dog Breed Matches Your Personality?</h3>
+                <button onclick="startQuiz()">Start Quiz</button>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Image Gallery</h2>
+            <div class="gallery">
+                <img src="dog1.jpg" alt="Dog 1" onclick="openLightbox(this)">
+                <img src="dog2.jpg" alt="Dog 2" onclick="openLightbox(this)">
+                <img src="dog3.jpg" alt="Dog 3" onclick="openLightbox(this)">
+                <img src="dog4.jpg" alt="Dog 4" onclick="openLightbox(this)">
+            </div>
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <span class="close">&times;</span>
+                <img id="lightbox-img" src="" alt="Lightbox Image">
+            </div>
+        </section>
+
+        <section id="resources">
+            <h2>Local Dog Resources</h2>
+            <ul>
+                <li><a href="https://www.adoptapet.com">Adopt a Pet</a></li>
+                <li><a href="https://www.akc.org">American Kennel Club</a></li>
+                <li><a href="https://www.dogtrainingnation.com">Dog Training Nation</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Paws & Tails. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function startQuiz() {
+            alert('Fun quiz coming soon!');
+        }
+
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
